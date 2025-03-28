@@ -33,6 +33,10 @@
                     colors: {
                         "btn-primary": "#FFDC26",
                         "bg-background": "rgba(17, 17, 17, 0.1)",
+                        "bg-light-pink": "rgba(248, 204, 251, 1)",
+                        "bg-light-blue": "rgba(172, 210, 253, 1)",
+                        "bg-light-yellow": "rgba(255, 249, 244, 1)",
+                        "bg-dark-yellow": "rgba(249, 223, 138, 1)",
                     }
                 }
             }
@@ -371,6 +375,36 @@
                     </div>
                 </div>
         </section>
+
+        <!-- Price Section -->
+         <section class="price-section md:container mx-auto py-28">
+            <div class="price-section-content pb-20">
+                <h2 class="sm:text-3xl lg:text-5xl font-normal font-adlam">Everyday low Price
+                </h2>
+            </div>
+            <div class="price-section-container flex gap-8 justify-between ">
+                <div class="left-price-container rounded-xl flex flex-1 items-center bg-gradient-to-r from-bg-light-pink to-bg-light-blue p-10">
+                    <div class="left-price-section-content space-y-2 p-5">
+                        <span class="text-sm">Under Price</span>
+                    <h3 class="text-xl font-semibold">Pet Grooming Mitt</h3>
+                    <p class="text-base font-normal text-white">(Easy Hair Removal)</p>
+                    <h2 class="text-2xl font-bold">$7.99</h2>
+                    </div>
+                    <div class="left-price-section-image">
+                        <img class="w-[300px]" src="./images/cute-dog-mid.png" alt="">
+                    </div>
+                </div>
+                <div class="right-price-container rounded-xl flex items-center bg-gradient-to-r from-bg-light-yellow to-bg-dark-yellow p-10">
+                    <div class="right-price-section-content p-10 space-y-2">
+                    <h3 class="text-xl font-semibold">Pet Grooming Mitt</h3>
+                    <h2 class="text-2xl font-bold text-[#FFDC26]">$7.99</h2>
+                    </div>
+                    <div class="right-price-section-image">
+                        <img class="w-[200px]" src="./images/cute-pet-mid.png" alt="">
+                    </div>
+                </div>
+            </div>
+         </section>
     </main>
     <footer></footer>
 </body>
