@@ -47,58 +47,48 @@
 
 <body class="font-sora">
     <!-- Header Section -->
-    <header class="bg-[#FFF9F4] h-24 z-20">
-        <div class="header-container md:container mx-auto py-2 px-4">
-            <div class="navbar">
-                <div class="navbar-start">
-                    <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </div>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a class="text-lg font-medium">Find a pet</a></li>
-                            <li> <a class="text-lg font-medium">Breeds</a></li>
-                            <li><a class="text-lg font-medium">Contact us</a></li>
-                        </ul>
-                    </div>
+    <header class="bg-[#FFF9F4] z-20">
+        <div
+            class="header-container md:container flex items-center justify-between mx-auto px-8 py-5 sm:border-b sm:border-black lg:border-none">
+            <div class="header-logo flex items-center sm:justify-between sm:w-full lg:justify-start lg:w-1/5">
+                <div class="logo-header">
                     <img src="./images/logo-header.png" alt="">
-                    <a class="text-2xl font-semibold text-[#000000] cursor-pointer ml-3">Browse <span
-                            class="text-[#FFDC26]">4</span>
-                        Pets</a>
+                </div>
+                <a class="sm:hidden lg:block text-2xl font-semibold text-[#000000] cursor-pointer ml-3">Browse <span
+                        class="text-[#FFDC26]">4</span>
+                    Pets</a>
+                <div class="header-mobile-menu cursor-pointer lg:hidden">
+                    <img src="./images/hamburger.png" alt="">
+                </div>
+            </div>
 
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a class="text-lg font-medium hover:bg-transparent">Find a pet</a></li>
-                        <li> <a class="text-lg font-medium hover:bg-transparent">Breeds</a></li>
-                        <li><a class="text-lg font-medium hover:bg-transparent">Contact us</a></li>
-                    </ul>
-                </div>
-                <div class="navbar-end gap-3">
-                    <ul class="menu-icon flex gap-3 mr-3">
-                        <li class="cursor-pointer"><img src="./images/bell.png" alt=""></li>
-                        <li class="cursor-pointer"><img src="./images/search .png" alt=""></li>
-                    </ul>
-                    <a
-                        class="btn bg-[#FFF9F4] border-[#FFDC26] text-base font-normal text-black hover:bg-black hover:text-white px-8">Login</a>
-                    <a
-                        class="btn bg-btn-primary text-base font-normal text-black hover:bg-black hover:text-white px-8">Register</a>
-                </div>
+            <nav class="sm:hidden lg:inline-flex header-menu items-center">
+                <ul class="flex gap-8">
+                    <li class="cursor-pointer py-2"><a class="text-lg font-medium " href="#">Find a pet</a></li>
+                    <li class="cursor-pointer py-2"><a class="text-lg font-medium " href="#">Breeds</a></li>
+                    <li class="cursor-pointer py-2"><a class="text-lg font-medium " href="#">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="sm:hidden lg:block header-login space-x-4">
+                <img class="sm:hidden lg:inline-flex cursor-pointer" src="./images/bell.png" alt="">
+                <img class="sm:hidden lg:inline-flex cursor-pointer" src="./images/search .png" alt="">
+
+                <a
+                    class="sm:hidden lg:inline-flex btn bg-[#FFF9F4] border-[#FFDC26] text-base font-normal text-black hover:bg-black hover:text-white px-8">Login</a>
+                <a
+                    class="sm:hidden lg:inline-flex btn bg-btn-primary text-base font-normal text-black hover:bg-black hover:text-white px-8">Register</a>
             </div>
         </div>
     </header>
+
+    <!-- Main Section -->
     <main>
         <!-- Banner Section -->
         <section class="banner-section md:container mx-auto">
             <div class="banner-container flex sm:flex-col mx-5">
                 <!-- Banner Content -->
-                <div class="banner-content space-y-6 z-10 sm:-mb-20 pt-20">
-                    <h1 class="sm:text-5xl lg:text-6xl/tight font-normal font-adlam">Pamper Your Pet, <br>Because They
+                <div class="banner-content space-y-6 z-10 sm:-mb-20 sm:pt-10 pt-20">
+                    <h1 class="sm:text-3xl lg:text-6xl/tight font-normal font-adlam">Pamper Your Pet, <br>Because They
                         Deserve
                         <br> the Bes
                     </h1>
@@ -114,22 +104,24 @@
                         a
                         pet</button>
                 </div>
-                <div class="banner-image flex items-center -mt-96">
+                <div class="banner-image flex items-center sm:-mt-10 lg:-mt-96">
                     <img class="lg:w-[100%]" src="./images/cat bg.png" alt="">
                 </div>
             </div>
         </section>
+
         <!-- Categories Section -->
-        <section class="categories-section py-28 md:container mx-auto">
+        <section class="categories-section sm:py-10 lg:py-28 md:container mx-auto px-5">
             <!-- Categories Content -->
-            <div class="categories-content pb-14">
-                <h2 class="sm:text-3xl lg:text-5xl font-normal font-adlam pb-5 px-2">Browse By Categories
+            <div class="categories-content pb-14 sm:pb-5">
+                <h2 class="sm:text-2xl lg:text-4xl font-normal font-adlam pb-5">Browse By Categories
                 </h2>
             </div>
             <!-- Categories Container -->
-            <div class="categories-card-container grid grid-cols-6">
+            <div class="categories-card-container grid sm:grid-cols-2 sm:gap-4 lg:grid-cols-6">
                 <!-- Categories Single Card -->
-                <div class="card w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
+                <div
+                    class="card sm:w-[290px] lg:w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
                     <figure>
                         <div class="avatar">
                             <div class="w-20 rounded-full bg-white">
@@ -144,7 +136,8 @@
                     </div>
                 </div>
                 <!-- Categories Single Card -->
-                <div class="card w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
+                <div
+                    class="card sm:w-[290px] lg:w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
                     <figure>
                         <div class="avatar">
                             <div class="w-20 rounded-full bg-white">
@@ -159,7 +152,8 @@
                     </div>
                 </div>
                 <!-- Categories Single Card -->
-                <div class="card w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
+                <div
+                    class="card sm:w-[290px] lg:w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
                     <figure>
                         <div class="avatar">
                             <div class="w-20 rounded-full bg-white">
@@ -174,7 +168,8 @@
                     </div>
                 </div>
                 <!-- Categories Single Card -->
-                <div class="card w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
+                <div
+                    class="card sm:w-[290px] lg:w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
                     <figure>
                         <div class="avatar">
                             <div class="w-20 rounded-full bg-white">
@@ -189,7 +184,8 @@
                     </div>
                 </div>
                 <!-- Categories Single Card -->
-                <div class="card w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
+                <div
+                    class="card sm:w-[290px] lg:w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
                     <figure>
                         <div class="avatar">
                             <div class="w-20 rounded-full bg-white">
@@ -203,8 +199,10 @@
                         <p class="text-center">3 items</p>
                     </div>
                 </div>
+
                 <!-- Categories Single Card -->
-                <div class="card w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
+                <div
+                    class="card sm:w-[290px] lg:w-[240px] card-compact justify-center mx-auto items-center bg-[#F9DF8A] p-8">
                     <figure>
                         <div class="avatar">
                             <div class="w-20 rounded-full bg-white">
@@ -221,21 +219,21 @@
             </div>
         </section>
 
-
         <!-- Products Section -->
-        <section class="Products-section py-28 bg-[#FFF9F4]">
-            <div class="products-content pb-16 md:container mx-auto">
-                <h2 class="sm:text-3xl lg:text-5xl font-normal font-adlam">Trending Pet Products
+        <section class="Products-section sm:py-8 lg:py-28 bg-[#FFF9F4] sm:px-5">
+            <div class="products-content sm:pb-8 lg:pb-16 md:container mx-auto">
+                <h2 class="sm:text-2xl lg:text-4xl font-normal font-adlam">Trending Pet Products
                 </h2>
             </div>
             <!-- Products Container -->
-            <div class="products-container flex gap-10 md:container mx-auto">
+            <div class="products-container flex sm:flex-col lg:flex-row gap-10 md:container mx-auto">
                 <!-- Products Image Left -->
                 <div
-                    class="products-image-left text-left space-y-4 bg-[#F9DF8A] rounded-xl py-20 px-10 w-[430px] relative">
+                    class="products-image-left text-left space-y-4 bg-[#F9DF8A] rounded-xl py-20 px-10 lg:w-[430px] relative">
                     <h2 class="card-title justify-left sm:text-3xl text-4xl font-normal font-adlam">
                         T-Shirt For Dogs</h2>
-                    <p class="text-base font-normal">Discover a world of treats, toys, and essentials handpicked for
+                    <p class="text-base font-normal">Discover a world of treats, toys, and <br> essentials handpicked
+                        for
                     </p>
                     <button
                         class="btn bg-white text-base font-normal border-none text-black hover:bg-black hover:text-white px-8">Shop
@@ -245,14 +243,14 @@
                     </div>
                 </div>
                 <!-- Products Image Right -->
-                <div class="products-image-right grid grid-cols-3 gap-4 grid-rows-3">
+                <div class="products-image-right grid sm:grid-cols-2 lg:grid-cols-3 gap-4 grid-rows-3">
                     <!-- Products Single Card -->
                     <div
-                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 w-[345px]">
+                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 sm:w-[290px] lg:w-[345px]">
                         <figure>
                             <div class="avatar">
                                 <div class="rounded-xl bg-white">
-                                    <img class=" p-5 bg-[#FFF9F4]" src="./images/rabbit-cartoon.png" />
+                                    <img class=" p-5 bg-[#FFF9F4]" src="./images/dog-cartoon.png" />
                                 </div>
                             </div>
                         </figure>
@@ -266,8 +264,9 @@
                             <p class=" text-base font-medium">$39.99</p>
                         </div>
                     </div>
+                    <!-- Products Single Card -->
                     <div
-                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 w-[345px]">
+                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 sm:w-[290px] lg:w-[345px]">
                         <figure>
                             <div class="avatar">
                                 <div class="rounded-xl bg-white">
@@ -285,8 +284,9 @@
                             <p class=" text-base font-medium">$39.99</p>
                         </div>
                     </div>
+                    <!-- Products Single Card -->
                     <div
-                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 w-[345px]">
+                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 sm:w-[290px] lg:w-[345px]">
                         <figure>
                             <div class="avatar">
                                 <div class="rounded-xl bg-white">
@@ -304,8 +304,9 @@
                             <p class=" text-base font-medium">$39.99</p>
                         </div>
                     </div>
+                    <!-- Products Single Card -->
                     <div
-                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 w-[345px]">
+                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 sm:w-[290px] lg:w-[345px]">
                         <figure>
                             <div class="avatar">
                                 <div class="rounded-xl bg-white">
@@ -323,8 +324,9 @@
                             <p class=" text-base font-medium">$39.99</p>
                         </div>
                     </div>
+                    <!-- Products Single Card -->
                     <div
-                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 w-[345px]">
+                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 sm:w-[290px] lg:w-[345px]">
                         <figure>
                             <div class="avatar">
                                 <div class="rounded-xl bg-white">
@@ -342,8 +344,9 @@
                             <p class=" text-base font-medium">$39.99</p>
                         </div>
                     </div>
+                    <!-- Products Single Card -->
                     <div
-                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 w-[345px]">
+                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 sm:w-[290px] lg:w-[345px]">
                         <figure>
                             <div class="avatar">
                                 <div class="rounded-xl bg-white">
@@ -361,8 +364,9 @@
                             <p class=" text-base font-medium">$39.99</p>
                         </div>
                     </div>
+                    <!-- Products Single Card -->
                     <div
-                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 w-[345px]">
+                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 sm:w-[290px] lg:w-[345px]">
                         <figure>
                             <div class="avatar">
                                 <div class="rounded-xl bg-white">
@@ -380,8 +384,9 @@
                             <p class=" text-base font-medium">$39.99</p>
                         </div>
                     </div>
+                    <!-- Products Single Card -->
                     <div
-                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 w-[345px]">
+                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 sm:w-[290px] lg:w-[345px]">
                         <figure>
                             <div class="avatar">
                                 <div class="rounded-xl bg-white">
@@ -399,8 +404,9 @@
                             <p class=" text-base font-medium">$39.99</p>
                         </div>
                     </div>
+                    <!-- Products Single Card -->
                     <div
-                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 w-[345px]">
+                        class="card card-compact flex flex-row justify-center mx-auto items-center bg-white border px-5 sm:w-[290px] lg:w-[345px] sm:hidden lg:inline-flex">
                         <figure>
                             <div class="avatar">
                                 <div class="rounded-xl bg-white">
@@ -418,18 +424,19 @@
                             <p class=" text-base font-medium">$39.99</p>
                         </div>
                     </div>
+
                 </div>
         </section>
 
         <!-- Price Section -->
-        <section class="price-section md:container mx-auto py-28">
-            <div class="price-section-content pb-20">
-                <h2 class="sm:text-3xl lg:text-5xl font-normal font-adlam">Everyday low Price
+        <section class="price-section md:container mx-auto sm:px-5 sm:py-14 lg:py-28">
+            <div class="price-section-content sm:pb-10 lg:pb-20">
+                <h2 class="sm:text-2xl lg:text-4xl font-normal font-adlam">Everyday low Price
                 </h2>
             </div>
-            <div class="price-section-container flex gap-8 ">
+            <div class="price-section-container flex sm:flex-col lg:flex-row gap-8 ">
                 <div
-                    class="left-price-container rounded-xl flex items-center bg-gradient-to-r from-bg-light-pink to-bg-light-blue p-10 w-[60%]">
+                    class="left-price-container rounded-xl flex items-center bg-gradient-to-r from-bg-light-pink to-bg-light-blue p-10 lg:w-[60%] sm:w-full">
                     <div class="left-price-section-content space-y-2 p-5">
                         <span class="text-sm">Under Price</span>
                         <h3 class="text-xl font-semibold">Pet Grooming Mitt</h3>
@@ -441,7 +448,7 @@
                     </div>
                 </div>
                 <div
-                    class="right-price-container rounded-xl flex items-center bg-gradient-to-r from-bg-light-yellow to-bg-dark-yellow p-10 w-[40%]">
+                    class="right-price-container rounded-xl flex items-center bg-gradient-to-r from-bg-light-yellow to-bg-dark-yellow p-10 lg:w-[40%] sm:w-full">
                     <div class="right-price-section-content p-10 space-y-2">
                         <h3 class="text-xl font-semibold">Pet Grooming Mitt</h3>
                         <h2 class="text-2xl font-bold text-[#FFDC26]">$7.99</h2>
@@ -452,16 +459,21 @@
                 </div>
             </div>
         </section>
+
     </main>
+
+    <!-- Footer Section -->
+
     <footer class="bg-footer-bg relative mt-56">
-        <div class="footer-subscription-section ">
+        <!-- Subscription Section -->
+        <div class="footer-subscription-section sm:px-5">
             <div
-                class="subscribe-container flex items-center p-12 gap-20 md:container mx-auto bg-[#FFF9F4] rounded-2xl absolute left-[185px] top-[-230px]">
+                class="subscribe-container flex items-center p-12 lg:py-20 sm:py-10 sm:gap-5 lg:gap-20 md:container sm:container mx-auto bg-[#FFF9F4] rounded-2xl absolute lg:flex-row sm:flex-col sm:top-[-220px] sm:left-5 sm:w-[600px] lg:w-full lg:left-[185px] lg:top-[-190px]">
                 <div class="subscribe-image">
-                    <img src="./images/cute-pet-mid.png" alt="">
+                    <img class="sm:w-[180px]" src="./images/cute-pet-mid.png" alt="">
                 </div>
-                <div class="subscribe-content space-y-4">
-                    <h2 class="sm:text-3xl lg:text-5xl font-normal font-adlam">Get Pawsome News!
+                <div class="subscribe-content space-y-4 sm:text-center lg:text-left">
+                    <h2 class="sm:text-2xl lg:text-4xl font-normal font-adlam">Get Pawsome News!
                     </h2>
                     <p class=" text-base font-medium">Exclusive training tips, ticks, product deals and more.</p>
                     <div class="subscribe-form space-y-4">
@@ -477,9 +489,13 @@
                 </div>
             </div>
         </div>
+
+        <!-- Footer Navigation Section -->
         <div class="footer-section">
-            <div class="footer-container flex md:container mx-auto pt-96 pb-14 justify-between">
-                <div class="footer-left pt-5">
+            <div
+                class="footer-container flex sm:flex-col lg:flex-row sm:container sm:px-5 md:container mx-auto sm:pt-80 lg:pt-64 pb-14 justify-between">
+                <!-- Footer Left -->
+                <div class="footer-left sm:pt-14 lg:pt-5">
                     <div class="footer-content flex gap-4 items-center mb-5">
                         <div class="footer-logo">
                             <img src="./images/logo-footer.png" alt="">
@@ -495,6 +511,7 @@
                             for your furry <br>friends</p>
                     </div>
                 </div>
+                <!-- Footer Right -->
                 <div class="footer-right pt-5">
                     <div class="footer-page-list">
                         <ul class="space-y-3">
@@ -504,6 +521,7 @@
                         </ul>
                     </div>
                 </div>
+                <!-- Footer Social Media -->
                 <div class="footer-social-media pt-5">
                     <ul class="space-y-3">
                         <h6 class="text-2xl font-medium">Follow Us</h6>
