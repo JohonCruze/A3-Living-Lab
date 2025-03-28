@@ -37,6 +37,7 @@
                         "bg-light-blue": "rgba(172, 210, 253, 1)",
                         "bg-light-yellow": "rgba(255, 249, 244, 1)",
                         "bg-dark-yellow": "rgba(249, 223, 138, 1)",
+                        "footer-bg": "rgba(255, 220, 38, 0.5)",
                     }
                 }
             }
@@ -382,9 +383,9 @@
                 <h2 class="sm:text-3xl lg:text-5xl font-normal font-adlam">Everyday low Price
                 </h2>
             </div>
-            <div class="price-section-container flex gap-8 justify-between ">
+            <div class="price-section-container flex gap-8 ">
                 <div
-                    class="left-price-container rounded-xl flex flex-1 items-center bg-gradient-to-r from-bg-light-pink to-bg-light-blue p-10">
+                    class="left-price-container rounded-xl flex items-center bg-gradient-to-r from-bg-light-pink to-bg-light-blue p-10 w-[60%]">
                     <div class="left-price-section-content space-y-2 p-5">
                         <span class="text-sm">Under Price</span>
                         <h3 class="text-xl font-semibold">Pet Grooming Mitt</h3>
@@ -396,7 +397,7 @@
                     </div>
                 </div>
                 <div
-                    class="right-price-container rounded-xl flex items-center bg-gradient-to-r from-bg-light-yellow to-bg-dark-yellow p-10">
+                    class="right-price-container rounded-xl flex items-center bg-gradient-to-r from-bg-light-yellow to-bg-dark-yellow p-10 w-[40%]">
                     <div class="right-price-section-content p-10 space-y-2">
                         <h3 class="text-xl font-semibold">Pet Grooming Mitt</h3>
                         <h2 class="text-2xl font-bold text-[#FFDC26]">$7.99</h2>
@@ -407,10 +408,11 @@
                 </div>
             </div>
         </section>
-
-        <!-- Subscription Section -->
-        <section class="subscription-section md:container mx-auto bg-[#FFF9F4] rounded-2xl">
-            <div class="subscribe-container flex items-center p-12 gap-20">
+    </main>
+    <footer class="bg-footer-bg relative mt-56">
+        <div class="footer-subscription-section ">
+            <div
+                class="subscribe-container flex items-center p-12 gap-20 md:container mx-auto bg-[#FFF9F4] rounded-2xl absolute left-[185px] top-[-230px]">
                 <div class="subscribe-image">
                     <img src="./images/cute-pet-mid.png" alt="">
                 </div>
@@ -430,10 +432,46 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        .
+        </div>
+        <div class="footer-section">
+            <div class="footer-container flex md:container mx-auto pt-96 pb-14 justify-between">
+                <div class="footer-left pt-5">
+                    <div class="footer-content flex gap-4 items-center mb-5">
+                        <div class="footer-logo">
+                            <img src="./images/logo-footer.png" alt="">
+                        </div>
+                        <div class="footer-title">
+                            <h2 class="text-2xl font-medium text-[#000000]">Browse <span class="text-[#FFDC26]">4</span> Pets</h2>
+                        </div>
+                    </div>
+                    <div class="footer-description-right ">
+                        <p class="text-base font-normal">Discover a world of treats, toys, and <br> essentials
+                            handpicked
+                            for your furry <br>friends</p>
+                    </div>
+                </div>
+                <div class="footer-right pt-5">
+                    <div class="footer-page-list">
+                        <ul class="space-y-3">
+                            <h6 class="text-2xl font-medium">Find a pet</h6>
+                            <li><a class="text-base font-medium cursor-pointer no-underline">Breeds</a></li>
+                            <li><a class="text-base font-medium cursor-pointer no-underline">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social-media pt-5">
+                    <ul class="space-y-3">
+                        <h6 class="text-2xl font-medium">Follow Us</h6>
+                        <div class="social-icon flex gap-2">
+                            <li class="cursor-pointer"><img src="./images/facebook.png" alt=""></li>
+                            <li class="cursor-pointer"><img src="./images/instagram.png" alt=""></li>
+                            <li class="cursor-pointer"><img src="./images/linkedin.png" alt=""></li>
+                            <li class="cursor-pointer"><img src="./images/youtube.png" alt=""></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 
