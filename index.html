@@ -38,6 +38,17 @@
                         "bg-light-yellow": "rgba(255, 249, 244, 1)",
                         "bg-dark-yellow": "rgba(249, 223, 138, 1)",
                         "footer-bg": "rgba(255, 220, 38, 0.5)",
+                    },
+                    animation: {
+                        heartbeat: 'heartBeat 1.5s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        heartBeat: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '25%': { transform: 'scale(1.05)' },
+                            '50%': { transform: 'scale(1)' },
+                            '75%': { transform: 'scale(1.1)' },
+                        }
                     }
                 }
             }
@@ -99,10 +110,8 @@
                         friends. Shop now and make tails wag
                         with joy!
                     </p>
-                    <button
-                        class="btn bg-btn-primary text-base font-normal text-black hover:bg-black hover:text-white px-8">Find
-                        a
-                        pet</button>
+                    <button class="btn bg-btn-primary text-base font-normal text-black hover:bg-black hover:text-white px-8 animate-heartbeat  
+                        hover:animate-none transition-all duration-300 transform">Find a pet</button>
                 </div>
                 <div class="banner-image flex items-center sm:-mt-10 lg:-mt-96">
                     <img class="lg:w-[100%]" src="./images/cat bg.png" alt="">
